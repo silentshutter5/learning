@@ -7,13 +7,7 @@ addTaskBtn.addEventListener("click", function() {
   if (taskText.trim() !== "") {
     const taskItem = document.createElement("li");
     taskItem.innerText = taskText;
-    taskItem.addEventListener("click", function(){
-      if(confirm('you sure?')){
-        taskItem.remove();
-      }
-    })
-
-   
+      
     taskList.appendChild(taskItem);
     taskInput.value = "";
   }
@@ -21,7 +15,14 @@ addTaskBtn.addEventListener("click", function() {
 
 
 taskList.addEventListener("click", function(event) {
+  let terminate = confirm(`you sure you want to delete ${taskList.innerText}?`);
+
+  if(terminate ===true){
   if (event.target.tagName.toLowerCase() === "li") {
     event.target.remove();
   }
+}
+else{
+  alert("you cancled");
+}
 });

@@ -9,10 +9,11 @@ const Calculator = () => {
 
   const [displayValue, setDisplayValue] = useState('');
 
-  const [operator, setOperator] = useState('');
+  const [operator, setOperator] = useState(''); 
 
   const [num1, setNum1] = useState('');
-  
+
+    
   const handleNumberClick = (value) => {
 
     setDisplayValue(displayValue + value);
@@ -26,7 +27,7 @@ const Calculator = () => {
 
     setNum1(displayValue);
 
-    setDisplayValue('');
+     setDisplayValue('');
 
   };
 
@@ -79,7 +80,7 @@ const Calculator = () => {
     setOperator('');
 
     setNum1('');
-    
+       
   };
 
 
@@ -89,7 +90,7 @@ const Calculator = () => {
 
       <Display value={displayValue} />
 
-      <div className="flex flex-wrap justify-center mb-4">
+      <div>
 
         <Button value="7" onClick={() => handleNumberClick('7')} />
 

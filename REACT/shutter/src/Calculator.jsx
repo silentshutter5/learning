@@ -40,25 +40,25 @@ const Calculator = () => {
 
       case '+':
 
-        result = (num1) + (displayValue);
+        result = parseInt(num1) + parseInt(displayValue);
 
         break;
 
       case '-':
 
-        result = (num1) - (displayValue);
+        result = parseInt(num1) - parseInt(displayValue);
 
         break;
 
       case '*':
 
-        result = (num1) * (displayValue);
+        result = parseInt(num1) * parseInt(displayValue);
 
         break;
 
       case '/':
 
-        result = (num1) / (displayValue);
+        result = parseInt(num1) / parseInt(displayValue);
 
         break;
 
@@ -68,7 +68,7 @@ const Calculator = () => {
 
     }
 
-    setDisplayValue(result.toString());
+    setDisplayValue(result);
 
   };
 

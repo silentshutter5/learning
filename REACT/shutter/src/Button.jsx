@@ -10,13 +10,13 @@ const Button = ({ value, onClick }) => {
   
       >
   
-        {/* {value} */}
+        {value}
   
       </button>
 
       
     );
-  <button key={no}></button>
+  
   };
   
   
